@@ -27,7 +27,7 @@ function build.BuildSite()
     local theme_style_tag = "<link rel='stylesheet' href='/flame_styles.css'>"
     local page_title = config.flame_site_title
     for k, file in pairs(files) do
-        print("[flame] compiling "..file)
+        print("[flame] compiling "..file.."...")
         local html = markdown.ParseDocument(file)
         -- Add styles to markdown
         local html_full = "<html>\n<head>\n<title>"..page_title.."</title>\n"..theme_style_tag.."\n<body>\n"..html.."\n</body>\n</html>"
@@ -40,5 +40,6 @@ function build.BuildSite()
     end
     print("[flame] copying theme...") 
     os.execute("cp theme_data/flame_styles.css site_data/flame_styles.css")
+    print("[flame] site compiled: done. Compiled files located in 'site_data'")
 end
 return build
