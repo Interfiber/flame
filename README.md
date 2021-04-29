@@ -7,3 +7,13 @@ Static site generator for lua
    - cURL
    - GNU Coreutils
    - unzip
+
+## Usage
+```
+flame - Static Site Generator
+Usage: flame [command]
+Commands:
+  init          - Create new site
+  build         - Build current site
+  serve         - Serve current site
+```
