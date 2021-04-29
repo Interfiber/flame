@@ -17,3 +17,6 @@ Commands:
   build         - Build current site
   serve         - Serve current site
 ```
+
+## Themes
+Themes contain a ```header``` and a ```footer``` with a ```style```.
