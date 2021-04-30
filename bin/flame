@@ -5,5 +5,6 @@ if [ -z $FLAME_DIR ]; then
     echo "Danger: FLAME_DIR not set. Please set it."
     exit 1
 fi
-cd $FLAME_DIR
-lua main.lua $@
+# Set lua path
+export LUA_PATH=$FLAME_DIR/\?.lua;
+lua $FLAME_DIR/main.lua $@
