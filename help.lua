@@ -6,6 +6,5 @@ function help.PrintHelp()
     print("Commands:")
     print("  init          - Create new site")
     print("  build         - Build current site")
-    print("  serve         - Serve current site")
 end
 return help
