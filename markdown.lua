@@ -14,7 +14,10 @@ function markdown.ParseDocument(input, options)
     local home = os.getenv("HOME")
     local output = io.popen("perl "..home.."/.local/flame/markdown.pl "..input)
     local markdown = output:read("*all")
-    -- replace varibles
+    for key, value in pairs(options.flame_site_varibles) do
+        markdown = markdown:gsub("%%"..key.."%%", value)
+    end
+    -- replace flame default varibles
     return markdown:gsub("%%TITLE%%", options.flame_site_title)
 end
 return markdown
