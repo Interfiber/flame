@@ -34,9 +34,11 @@ function build.BuildSite()
     end
     local theme_style_tag = "<link rel='stylesheet' href='/flame_styles.css'>"
     local page_title = config.flame_site_title
+    local site_options = config.flame_site_options
+    local page_root = config.flame_site_root
     for k, file in pairs(files) do
         print("[flame] compiling "..file.."...")
-        local html = markdown.ParseDocument(file)
+        local html = markdown.ParseDocument(file, config)
         -- Add styles to markdown
         local header = ""
         local footer = ""
@@ -62,6 +64,11 @@ function build.BuildSite()
     end
     print("[flame] copying theme...") 
     os.execute("cp theme_data/flame_styles.css site_data/flame_styles.css")
+    for k, option in pairs(site_options) do
+        if option == "rss.enable" then
+            
+        end
+    end
     print("[flame] site compiled: done. Compiled files located in 'site_data'")
 end
 return build

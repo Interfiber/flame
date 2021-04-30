@@ -24,6 +24,8 @@ function init.InitFolder()
     io.write("options.flame_site_title = 'My Amazing Cool Site'\n")
     io.write("options.flame_site_copyright = 'Copyright bob corp 2021'\n")
     io.write("options.flame_site_root = '/'\n")
+    -- TODO: add options
+    io.write("options.flame_site_options = {''}\n")
     io.write("-- Configure files to compile\n")
     io.write("options.flame_site_files = {'index.md'}\n")
     io.write("return options")

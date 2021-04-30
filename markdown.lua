@@ -10,10 +10,11 @@ function markdown.DownloadParser()
     os.execute("cp Cache/Markdown_1.0.1/Markdown.pl $HOME/.local/flame/markdown.pl")
     os.execute("rm -rf Cache")
 end
-function markdown.ParseDocument(input)
+function markdown.ParseDocument(input, options)
     local home = os.getenv("HOME")
     local output = io.popen("perl "..home.."/.local/flame/markdown.pl "..input)
-    local markdown = output:read("*all") 
-    return markdown
+    local markdown = output:read("*all")
+    -- replace varibles
+    return markdown:gsub("%%TITLE%%", options.flame_site_title)
 end
 return markdown
