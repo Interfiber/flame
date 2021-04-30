@@ -46,13 +46,15 @@ function build.BuildSite()
             -- read from html header doc
             local header_file = io.open("theme_data/flame_header.html", "r")
             io.input(header_file)
-            header = io.read("a")
+            -- replace varibles
+            header = io.read("a"):gsub("%%COPYRIGHT%%", config.flame_site_copyright):gsub("%%TITLE%%", config.flame_site_title)
         end
         if footer_exists then
             -- read from html footer doc
             local footer_file = io.open("theme_data/flame_footer.html", "r")
             io.input(footer_file)
-            footer = io.read("a")
+            -- replace varibles
+            footer = io.read("a"):gsub("%%COPYRIGHT%%", config.flame_site_copyright):gsub("%%TITLE%%", config.flame_site_title)
         end
         local html_full = "<html>\n<head>\n<title>"..page_title.."</title>\n"..theme_style_tag.."\n<body>\n"..header.."\n"..html..footer.."\n</body>\n</html>"
         -- write file to site_data
