@@ -1,22 +1,16 @@
 # Flame
-Static site generator for lua
+The barebones static site generator
 
-## Requirments
-   - Lua
-   - Perl(used for markdown.pl)
-   - cURL
-   - GNU Coreutils
-   - unzip
+[![asciicast](https://asciinema.org/a/410990.svg)](https://asciinema.org/a/410990)
 
-## Usage
-```
-flame - Static Site Generator
-Usage: flame [command]
-Commands:
-  init          - Create new site
-  build         - Build current site
-  serve         - Serve current site
-```
+## Requirements
+  - Perl
+  - GNU coreutils
+  - Lua
+  - unzip
 
-## Themes
-Themes contain a ```header``` and a ```footer``` with a ```style```.
+## About
+Flame is the barebones static site generator. Which means it does one thing, it creates a static site. Flame has support for varibles, themes, static images, and thats basically it. It follows the UNIX philosophy, "a program should do one thing and do it well". Thats what flame aims to do, it will never support bloated things such as javascript, and super complex templating engines. Flame also runs with the default lua standard library, so there is no need to use extra dependencies.
+
+## Wiki
+Look [here](https://github.com/Interfiber/flame/wiki)

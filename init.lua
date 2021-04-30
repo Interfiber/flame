@@ -33,7 +33,6 @@ function init.InitFolder()
     os.execute("echo '# This is my cool website built with flame\nAnother line here' >> index.md")
     os.execute("touch theme_data/flame_styles.css")
     os.execute("touch theme_data/flame_header.html")
-    os.execute("touch theme_data/flame_javascript.js")
     os.execute("touch theme_data/flame_footer.html")
     print("[flame] generated site.")
 end
