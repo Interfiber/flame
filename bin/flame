@@ -6,5 +6,5 @@ if [ -z $FLAME_DIR ]; then
     exit 1
 fi
 # Set lua path
-export LUA_PATH=$FLAME_DIR/\?.lua;
+export LUA_PATH=$FLAME_DIR/\?.lua\;$PWD/?.lua\;
 lua $FLAME_DIR/main.lua $@
