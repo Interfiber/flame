@@ -1,5 +1,8 @@
 name: Build and Deploy
-on: [push]
+on:
+  push:
+    branches:
+      - gh-pages
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -14,8 +17,6 @@ jobs:
           mkdir -p $HOME/.local
           lua -e "$(curl -L https://raw.githubusercontent.com/Interfiber/flame/main/tools/installer.lua)"
           export FLAME_DIR=$HOME/.local/flame_install
-          # Checkout correct branch
-          /usr/bin/git checkout gh-pages
           $FLAME_DIR/bin/flame build
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.1
