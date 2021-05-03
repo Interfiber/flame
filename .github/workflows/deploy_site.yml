@@ -15,7 +15,7 @@ jobs:
           lua -e "$(curl -L https://raw.githubusercontent.com/Interfiber/flame/main/tools/installer.lua)"
           export FLAME_DIR=$HOME/.local/flame_install
           # Checkout correct branch
-          git checkout gh-pages
+          /usr/bin/git checkout gh-pages
           $FLAME_DIR/bin/flame build
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.1
