@@ -1,6 +1,1 @@
-# Ignore site testing files
 site_data
-theme_data
-index.md
-flame.lua
-other_page.md

@@ -1,0 +1,2 @@
+# Installing a site theme
+When you site was created a new folder called ```theme_data``` will be created. In this folder is some theme files. You can edit these files or use the basic theme. The basic theme can be installed by copying the theme files from [here](https://github.com/Interfiber/flame/tree/main/themes/basic) into your ```theme_data``` folder. Then building your site.
